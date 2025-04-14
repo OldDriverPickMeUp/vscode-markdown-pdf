@@ -296,7 +296,7 @@ function convertMarkdownToHtml(filename, type, text) {
 }
 
 /*
- * https://github.com/microsoft/vscode/blob/ca4ceeb87d4ff935c52a7af0671ed9779657e7bd/extensions/markdown-language-features/src/slugify.ts#L26
+ * https://github.com/microsoft/vscode/blob/c07cee3039c8ea6e9bab02645599ec9e7796fd4c/extensions/markdown-language-features/src/slugify.ts#L27
  */
 function Slug(string) {
   try {
@@ -304,7 +304,8 @@ function Slug(string) {
       string.trim()
             .toLowerCase()
             .replace(/\s+/g, '-') // Replace whitespace with -
-            .replace(/[\]\[\!\'\#\$\%\&\(\)\*\+\,\.\/\:\;\<\=\>\?\@\\\^\{\|\}\~\`。，、；：？！…—·ˉ¨‘’“”々～‖∶＂＇｀｜〃〔〕〈〉《》「」『』．〖〗【】（）［］｛｝]/g, '') // Remove known punctuators
+            // allow-any-unicode-next-line
+            .replace(/[\]\[\!\/\'\"\#\$\%\&\(\)\*\+\,\.\/\:\;\<\=\>\?\@\\\^\{\|\}\~\`。，、；：？！…—·ˉ¨‘’“”々～‖∶＂＇｀｜〃〔〕〈〉《》「」『』．〖〗【】（）［］｛｝]/g, '') // Remove known punctuators
             .replace(/^\-+/, '') // Remove leading -
             .replace(/\-+$/, '') // Remove trailing -
     );
