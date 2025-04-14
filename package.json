@@ -24,6 +24,9 @@
     "type": "git",
     "url": "https://github.com/yzane/vscode-markdown-pdf.git"
   },
+  "sponsor": {
+    "url": "https://github.com/sponsors/yzane"
+  },
   "activationEvents": [
     "onCommand:extension.markdown-pdf.settings",
     "onCommand:extension.markdown-pdf.pdf",
