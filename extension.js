@@ -332,7 +332,7 @@ function makeHtml(data, uri) {
 
     // read mermaid javascripts
     var mermaidServer = vscode.workspace.getConfiguration('markdown-pdf')['mermaidServer'] || '';
-    var mermaid = '<script src=\"' + mermaidServer + '\"></script>';
+    var mermaid = '<script type="module" src=\"' + mermaidServer + '\"></script>';
 
     // compile template
     var mustache = require('mustache');
